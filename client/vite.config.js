@@ -7,11 +7,13 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: `http://localhost:${PORT}`,
+                //target: `http://localhost:${PORT}`,
+                target: `https://incident-management.onrender.com`,
                 changeOrigin: true,
             },
             '/auth': {
-                target: `http://localhost:${PORT}`,
+                //target: `http://localhost:${PORT}`,
+                target: `https://incident-management.onrender.com`,
                 changeOrigin: true,
             },
         },
