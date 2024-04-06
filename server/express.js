@@ -31,6 +31,7 @@ const whitelist = ['http://localhost:4173', 'http://example2.com'];
 const corsOptions = {
   credentials: true, // This is important.
   origin: (origin, callback) => {
+	return callback(null, true)
     if(whitelist.includes(origin))
       return callback(null, true)
 
